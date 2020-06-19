@@ -7,7 +7,7 @@ RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
 COPY . /opt/app
 WORKDIR /opt/app/
 RUN ls -al
-RUN npm run prod 
+RUN npm start 
 RUN ls -al
 FROM nginx:latest as nginx
 COPY conf.d/nginx.conf /etc/nginx/nginx.conf
